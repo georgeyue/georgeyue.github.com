@@ -12,5 +12,12 @@
 
 <p>From time to time, I'd like a moment in the sun reading up on how to improve site performance, what's new in mobile web development, or peeking at what other talented coders are working on on github.</p>
 
+<h2>Handle Bookmarklets</h2>
+<dl>
+<dt>
+<a href="javascript:(function(){function f(path,el) { el=el||document;var h=document.evaluate(path, el, null, XPathResult.ANY_TYPE, null );var a=null,r=[]; while(a=h.iterateNext()) { r.push(a) }; return r }; var p=prompt('Partial search for:','Cron Daemon');var e = f('//input[./../..//font[contains(.,\''+p+'\')]]',window.frames['viewer'].document); for(var i=0,l=e.length;i<l;i++) {e[i].checked=true;}})()">Check them Cron Spams</a>
+</dt>
+<dd><p>Fingers get all sore/cramped from clicking those damn cron spams? Using web access? No worries!!! (chrome tested only)</p></dd>
+</dl>
     </body> 
 </html> 
