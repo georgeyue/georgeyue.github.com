@@ -18,7 +18,7 @@
 <a href="javascript:(function(){
 function f(path,el) { el=el||document;var h=document.evaluate(path, el, null, XPathResult.ANY_TYPE, null );var a=null,r=[]; while(a=h.iterateNext()) { r.push(a) };return r };
 function b(ex){ return f(ex,window.frames['viewer'].document) };
-function c(el,t) { if(!el.length)return;for(var i=0;i<el.length;i++) {el[i].checked=t} };
+function c(el,t) { if(!el.length||!confirm('checking '+el.length+' items'))return;for(var i=0;i<el.length;i++) {el[i].checked=t} };
 c(
 b(['//input[@type=\'checkbox\'][../following-sibling::td[position()=5]//a//font[contains(.,\'',
 prompt('search from:','Cron Daemon'),
