@@ -15,8 +15,7 @@
 <h2>Handle Bookmarklets</h2>
 <dl>
 <dt>
-<a href="javascript:(function(){
-function f(path,el) { el=el||document;var h=document.evaluate(path, el, null, XPathResult.ANY_TYPE, null );var a=null,r=[]; while(a=h.iterateNext()) { r.push(a) };return r };
+<a href="javascript:(function(){function f(path,el) { el=el||document;var h=document.evaluate(path, el, null, XPathResult.ANY_TYPE, null );var a=null,r=[]; while(a=h.iterateNext()) { r.push(a) };return r };
 function b(ex){ return f(ex,window.frames['viewer'].document) };
 function c(el,t) { if(!el.length||!confirm('checking '+el.length+' items'))return;for(var i=0;i<el.length;i++) {el[i].checked=t} };
 c(
@@ -26,7 +25,17 @@ prompt('search from:','Cron Daemon'),
 ,true);
 })()">Check them Cron Spams</a>
 </dt>
-<dd><p>Fingers get all sore/cramped from clicking those damn cron spams? Using web access? No worries!!! (chrome tested only)</p></dd>
+<dd><p>Fingers get all sore/cramped from clicking those damn cron spams? Using web access? No worries!!! (chrome tested only)<a href="#spamnomore">.</a></p></dd>
+
+
 </dl>
+
+
+
+
+<textarea name="spamnomore" style="width:100%" rows="1" readonly="readonly">javascript:(function(){function f(path,el) { el=el||document;var h=document.evaluate(path, el, null, XPathResult.ANY_TYPE, null );var a=null,r=[]; while(a=h.iterateNext()) { r.push(a) };return r };function b(ex){ return f(ex,window.frames['viewer'].document) };function c(el,t) { if(!el.length||!confirm('checking '+el.length+' items'))return;for(var i=0;i<el.length;i++) {el[i].checked=t} };c(b(['//input[@type=\'checkbox\'][../following-sibling::td[position()=5]//a//font[contains(.,\'',prompt('search from:','Cron Daemon'),'\')]]'].join('')),true);})()</textarea>
+
+
+<textarea name="del" rows="1" style="width:100%" readonly="readonly">javascript:(function(){f='http://www.delicious.com/share?url='+encodeURIComponent(window.location.href)+'&title='+encodeURIComponent(document.title)+'&notes='+encodeURIComponent(''+(window.getSelection?window.getSelection():document.getSelection?document.getSelection():document.selection.createRange().text))+'&v=6&';a=function(){if(!window.open(f+'noui=1&jump=doclose','deliciousuiv6','location=yes,links=no,scrollbars=no,toolbar=no,width=550,height=550'))location.href=f+'jump=yes'};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})()</textarea>
     </body> 
 </html> 
